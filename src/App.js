@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Nav from "./Nav";
-import { Route, BrowserRouter, Routes } from "react-router-dom";
-import DogList from "./DogList";
-import DogDetails from "./DogDetails";
+import { BrowserRouter } from "react-router-dom";
+import RouteList from "./RouteList"
+
 
 const API_URL = "http://localhost:5001/dogs";
 
@@ -34,11 +34,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
         <Nav />
-        <Routes>
-          <Route path="/" ></Route>
-          <Route path="/dogs" element={<DogList dogs={dogs} />} />
-          <Route path="/dogs/:name" element={<DogDetails dogs={dogs} />} />
-        </Routes>
+        <RouteList dogs={dogs}/>
       </BrowserRouter>
     </div>
   );

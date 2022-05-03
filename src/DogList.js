@@ -11,14 +11,15 @@ import { Link } from "react-router-dom";
 function DogList({dogs}){
 
   return (
-    dogs.data.map(dog => (
-      <ul>
-        <li>
+    <ul>
+    {dogs.data.map(dog => (
+        <li key={dog.name}>
         <h3>{dog.name}</h3>
         <Link to={`/dogs/${dog.name}`}><img src={`/${dog.src}.jpg`} alt={dog.name} /></Link>
         </li>
-      </ul>
-    ))
+      )
+    )}
+    </ul>
   )
 }
 

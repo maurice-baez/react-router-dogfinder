@@ -17,7 +17,7 @@ function DogDetails({dogs}){
 
   return (
     dog.map(d => (
-      <ul>
+      <ul key={d.name}>
         <li>
         <h3>{d.name}</h3>
         <img src={`/${d.src}.jpg`} alt={d.name} />
