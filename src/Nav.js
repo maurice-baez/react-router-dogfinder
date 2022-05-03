@@ -1,11 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+
+/** Nav component.
+ * Exists on all pages. renders link to dogList
+ *
+ *  props: none
+ *
+ *  state: none
+ * 
+ * */
 function Nav() {
   return (
     <ul>
-      <li><Link to="/">Home</Link></li>
-      <li><Link to="/dogs">Dogs</Link></li>
+      <li><Link to="/">Dogs</Link></li>
     </ul>
   );
 }
